@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="client\package.json" />
+      <_ContentIncludedByDefault Remove="client\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="client\tsconfig.node.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ui\" />
+      <Folder Include="wwwroot\public\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\.eslintrc.cjs" />
+      <None Include="wwwroot\.gitignore" />
+      <None Include="wwwroot\index.html" />
+      <None Include="wwwroot\src\App.css" />
+      <None Include="wwwroot\src\App.tsx" />
+      <None Include="wwwroot\src\assets\react.svg" />
+      <None Include="wwwroot\src\assets\vite.svg" />
+      <None Include="wwwroot\src\index.css" />
+      <None Include="wwwroot\src\main.tsx" />
+      <None Include="wwwroot\src\vite-env.d.ts" />
+      <None Include="wwwroot\vite.config.ts" />
+      <None Include="wwwroot\yarn.lock" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="wwwroot\package.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\tsconfig.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\tsconfig.node.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
