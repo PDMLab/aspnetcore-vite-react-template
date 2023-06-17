@@ -19,7 +19,6 @@
 
     <ItemGroup>
       <Folder Include="ui\" />
-      <Folder Include="wwwroot\public\" />
     </ItemGroup>
 
     <ItemGroup>
