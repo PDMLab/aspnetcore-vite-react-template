@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import {AddCustomer} from "./add-customer/add-customer.tsx";
+import TestComponent from "./add-customer-with-contact-person/add-customer-with-contact-person.tsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -50,6 +51,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <AddCustomer></AddCustomer>
+
+      <TestComponent></TestComponent>
     </>
   )
 }

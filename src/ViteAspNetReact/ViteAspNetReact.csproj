@@ -65,4 +65,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Update="wwwroot/**/*.*" Watch="false" />
+    </ItemGroup>
+
+
 </Project>
