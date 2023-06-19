@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ViteAspNetReact.Areas.Identity.Data;
 
+
 #nullable disable
 
 namespace ViteAspNetReact.Migrations
