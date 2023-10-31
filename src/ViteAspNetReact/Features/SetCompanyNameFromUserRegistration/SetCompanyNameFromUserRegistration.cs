@@ -1,0 +1,3 @@
+namespace ViteAspNetReact.Features.SetCompanyNameFromUserRegistration;
+
+public record CompanyNameSetFromUserRegistration(string CompanyName);

@@ -12,7 +12,7 @@ using ViteAspNetReact.Areas.Identity.Data;
 
 namespace ViteAspNetReact.Migrations
 {
-    [DbContext(typeof(IdentityDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220917043158_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

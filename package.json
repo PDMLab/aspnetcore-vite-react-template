@@ -1,0 +1,28 @@
+{
+  "name": "getkliento",
+  "version": "1.0.0",
+  "description": "kliento",
+  "main": "index.js",
+  "scripts": {
+    "dev": "APP_ENV=\"dev\" tmuxinator",
+    "dev-test": "tmuxinator start -p .tmuxinator-test.yml",
+    "prepare": "husky install",
+    "start": "tmuxinator",
+    "stop": "docker stop $(docker ps -aq); docker rm $(docker ps -aq);tmux kill-session"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/getkliento/getkliento.git"
+  },
+  "author": "Alexander Zeitler <alexander.zeitler@pdmlab.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getkliento/getkliento/issues"
+  },
+  "homepage": "https://github.com/getkliento/getkliento#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "husky": "^8.0.3"
+  }
+}

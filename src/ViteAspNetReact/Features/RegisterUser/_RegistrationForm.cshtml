@@ -1,0 +1,109 @@
+@using ViteAspNetReact.Features.RegisterUser
+@model ViteAspNetReact.Features.RegisterUser.Registration
+
+@{
+  Layout = null;
+}
+
+
+<form class="space-y-6"
+      hx-action="RegisterUser"
+      hx-controller="RegisterUser"
+      hx-post
+      hx-swap="outerHTML">
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <label asp-for="FirstName"
+             class="block text-sm font-medium text-gray-700">
+      </label>
+      <div class="mt-1">
+        <input asp-for="FirstName"
+               class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+               type="text"/>
+      </div>
+    </div>
+    <div>
+      <label asp-for="LastName"
+             class="block text-sm font-medium text-gray-700">
+      </label>
+      <div class="mt-1">
+        <input asp-for="LastName"
+               class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+               type="text"/>
+      </div>
+    </div>
+  </div>
+  <div>
+    <label asp-for="CompanyName"
+           class="block text-sm font-medium text-gray-700">
+    </label>
+    <div class="mt-1">
+      <input asp-for="CompanyName"
+             class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"/>
+    </div>
+  </div>
+  <div>
+    <label asp-for="Email"
+           class="block text-sm font-medium text-gray-700">
+      E-Mail (wird als Benutzername verwendet)
+    </label>
+    <div class="mt-1">
+      <input asp-for="Email"
+             class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"/>
+    </div>
+  </div>
+  <div>
+    <label asp-for="Password"
+           class="block text-sm font-medium text-gray-700">
+    </label>
+    <div class="mt-1">
+      <input asp-for="Password"
+             class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+             hx-action="PasswordValidation"
+             hx-controller="RegisterUser"
+             hx-post
+             hx-swap="innerHTML"
+             hx-target="#passwordstrength"
+             hx-trigger="keyup"
+             type="password"/>
+    </div>
+  </div>
+  <div id="passwordstrength">
+    @await Html.PartialAsync("~/Features/RegisterUser/_PasswordStrength.cshtml", new PasswordValidation()
+           {
+             PasswordScore = null
+           })
+  </div>
+
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <input asp-for="TermsAccepted"
+             class="w-4 h-4 border-gray-300 rounded text-blue-500 focus:ring-blue-500"
+             type="checkbox"/>
+      <label asp-for="TermsAccepted"
+             class="block ml-2 text-sm text-gray-900">
+        Ich stimme den Bedingungen zu
+      </label>
+    </div>
+  </div>
+  <div asp-validation-summary="All">
+  </div>
+  <div>
+    <button class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-blue-500 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+            type="submit">
+      Jetzt registrieren
+    </button>
+  </div>
+  <div>
+    <p>
+        Bereits Benutzer? 
+        <a href="/Identity/Account/Login" 
+           class="text-blue-500 hover:text-blue-400"
+           >
+          Hier anmelden
+        </a>
+    </p>
+    <p>
+  </div>
+
+</form>

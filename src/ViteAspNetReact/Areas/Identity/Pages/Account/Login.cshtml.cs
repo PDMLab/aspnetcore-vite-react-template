@@ -63,6 +63,7 @@ public class LoginModel : PageModel
     ///     directly from your code. This API may change or be removed in future releases.
     /// </summary>
     [Required(ErrorMessage = "E-Mail ist ein Pflichtfeld")]
+    [Display(Name = "E-Mail")]
     [EmailAddress(ErrorMessage = "Bitte geben Sie eine E-Mail-Adresse ein")]
     public string Email { get; set; }
 
@@ -71,6 +72,7 @@ public class LoginModel : PageModel
     ///     directly from your code. This API may change or be removed in future releases.
     /// </summary>
     [Required(ErrorMessage = "Passwort ist ein Pflichtfeld")]
+    [Display(Name = "Passwort")]
     [DataType(DataType.Password)]
     public string Password { get; set; }
 

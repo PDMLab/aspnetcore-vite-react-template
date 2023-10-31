@@ -1,0 +1,9 @@
+@model ViteAspNetReact.Features.SetOrganizationAddress.SetOrgAddress
+
+@{
+  ViewBag.Title = "Unternehmen";
+  Layout = null;
+}
+
+@{@(await Html.
+    PartialAsync("~/Features/SetOrganizationAddress/_OrganizationAddressForm.cshtml", Model))}

@@ -1,0 +1,79 @@
+﻿@using ViteAspNetReact.Core
+@model ViteAspNetReact.Features.RegisterUser.RegistrationModel?
+@{
+  ViewData["Title"] = "Registrierung";
+}
+@{
+  Layout = null;
+}
+
+<!DOCTYPE html >
+
+<html lang="de">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0"
+        name="viewport"/>
+  <meta includeAspNetAntiforgeryToken="true"
+        name="htmx-config"/>
+  <title>
+    @(string.IsNullOrEmpty(ViewData["Title"]?.ToString()) ? "app" : $"{ViewData["Title"]} - app")
+  </title>
+
+
+  <script src="~/lib/htmx.org/dist/htmx.min.js"></script>
+  <link asp-append-version="true"
+        href="~/css/site.css"
+        rel="stylesheet"/>
+</head>
+<body id="target">
+
+<div class="flex flex-col justify-center min-h-screen py-12 bg-gray-50 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+
+    <img alt="@Constants.ApplicationName"
+         class="w-auto h-12 mx-auto"
+         src="~/images/noun-wave-2596200-12B0FB.svg"/>
+    <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+      Registrierung
+    </h2>
+    @* } *@
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
+      <div asp-validation-summary="All"></div>
+      @{@(await Html.
+          PartialAsync("~/Features/RegisterUser/_RegistrationForm.cshtml", Model?.Input))}
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+document.addEventListener("htmx:configRequest", (evt) => {
+    let httpVerb = evt.detail.verb.toUpperCase();
+    if (httpVerb === 'GET') return;
+    
+    let antiForgery = htmx.config.antiForgery;
+
+    if (antiForgery) {
+        
+        // already specified on form, short circuit
+        if (evt.detail.parameters[antiForgery.formFieldName])
+            return;
+        
+        if (antiForgery.headerName) {
+            evt.detail.headers[antiForgery.headerName]
+                = antiForgery.requestToken;
+        } else {
+             evt.detail.parameters[antiForgery.formFieldName]
+                = antiForgery.requestToken;
+        }
+    }
+});
+
+
+
+</script>
+</html>

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* error messages */
+  .field-validation-error {
+    @apply text-rose-700 text-xs font-thin !important
+  }
+
+  /* form inputs with errors */
+  .input-validation-error {
+    @apply border-rose-700 focus:ring-rose-700 !important
+  }
+
+  /* error summary text */
+  .validation-summary-errors {
+    @apply text-rose-700 text-sm !important
+  }
+}

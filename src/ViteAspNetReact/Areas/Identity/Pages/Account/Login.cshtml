@@ -1,4 +1,5 @@
 ﻿@page
+@using ViteAspNetReact.Core
 @model LoginModel
 
 @{
@@ -33,9 +34,9 @@
 <div class="flex flex-col justify-center min-h-screen py-12 bg-gray-50 sm:px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
 
-    <img alt="Workflow"
-         class="w-auto h-12 mx-auto"
-         src="~/img/logo-outline.svg"/>
+    <img alt="@Constants.ApplicationName"
+         class="w-auto h-20 mx-auto"
+         src="~/images/noun-wave-2596200-12B0FB.svg"/>
     <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
       Anmeldung
     </h2>
@@ -54,7 +55,7 @@
           </label>
           <div class="mt-1">
             <input asp-for="Input.Email"
-                   class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-turquoise-500 focus:border-turquoise-500 sm:text-sm"
+                   class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                    type="text"/>
           </div>
         </div>
@@ -64,7 +65,7 @@
           </label>
           <div class="mt-1">
             <input asp-for="Input.Password"
-                   class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-turquoise-500 focus:border-turquoise-500 sm:text-sm"
+                   class="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                    hx-action="PasswordValidation"
                    hx-controller="RegisterUser"
                    hx-post
@@ -78,15 +79,19 @@
         <div asp-validation-summary="All">
         </div>
         <div>
-          <button class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-turquoise-500 hover:bg-turquoise-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-turquoise-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          <button class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-blue-500 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                   type="submit">
             Anmelden
           </button>
         </div>
         <div>
-          <a asp-page="RegisterUser"
-             asp-route-returnUrl="@Model.ReturnUrl">
-            Registrieren
+          Noch keinen Account?
+          <a asp-action="RegisterUser"
+             asp-controller="RegisterUser"
+             asp-route-returnUrl="@Model.ReturnUrl"
+             class="text-blue-500 hover:text-blue-400"
+             >
+            Jetzt registrieren
           </a>
         </div>
       </form>

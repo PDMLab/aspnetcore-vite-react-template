@@ -1,0 +1,17 @@
+@model ViteAspNetReact.Features.InviteUser.InviteUser
+
+
+<form hx-post>
+  <partial name="~/Features/InviteUser/_InviteUserInput.cshtml"></partial>
+
+  <div class="flex justify-end mt-10 sm:mt-10">
+    <button class="px-4 py-2 text-sm font-medium text-gray-700 underline rounded-md  cursor-pointer focus:outline-none focus:ring-0 focus:ring-offset-0"
+            type="reset">
+      Benutzer nicht einladen
+    </button>
+    <button class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-blue-500 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            type="submit">
+      Benutzer einladen
+    </button>
+  </div>
+</form>

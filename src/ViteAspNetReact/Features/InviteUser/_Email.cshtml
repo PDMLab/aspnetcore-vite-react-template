@@ -1,0 +1,13 @@
+@model ViteAspNetReact.Features.InviteUser.EmailInputModel
+
+<div class="col-span-2 sm:col-span-1 grid items-center">
+  <div class="font-medium text-gray-700 text-md">
+    @Model.Label
+  </div>
+</div>
+
+<div class="col-span-4 sm:col-span-3">
+  <input asp-for="Value"
+         class="block w-full mt-1 border-gray-300 rounded-md shadow-sm form-input focus:ring-blue-200 focus:border-blue-200 sm:text-sm"
+         type="text"/>
+</div>

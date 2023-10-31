@@ -11,7 +11,7 @@ using ViteAspNetReact.Areas.Identity.Data;
 
 namespace ViteAspNetReact.Migrations
 {
-    [DbContext(typeof(IdentityDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class IdentityDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

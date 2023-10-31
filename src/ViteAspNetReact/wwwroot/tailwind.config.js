@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
+    '../Features/**/*.cshtml',
     './*.html'
   ],
   safelist: [
@@ -18,16 +19,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        turquoise: {
-          100: "#d8f3fd",
-          200: "#77d6f8",
-          300: "#51cbf7",
-          400: "#51cbf7",
-          500: "#51cbf7",
-          600: "#08749B",
-          700: "#065775",
-          800: "#51cbf7",
-          900: "#021d27",
+        blue: {
+          50: "#EBF8FF",
+          100: "#EBF8FF",
+          200: "#D0EFFF",
+          300: "#B5E6FE",
+          400: "#7FD4FD",
+          500: "#12B0FB",
+          600: "#095F88",
+          700: "#05374E",
+          800: "#032331",
+          900: "#000E14",
         },
       },
     },

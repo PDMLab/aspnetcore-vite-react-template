@@ -1,0 +1,67 @@
+@model ViteAspNetReact.Features.InviteUser.InviteUser
+
+
+<div class="mt-10 sm:mt-10">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">
+          Benutzerdaten
+        </h3>
+        <p class="mt-1 text-sm font-normal text-gray-600">
+          Wie lautet der Name des Benutzers und wie ist er erreichbar?
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <div class="overflow-hidden sm:rounded-md">
+        <div class="px-4 py-5 bg-white sm:p-6">
+
+          @* body *@
+
+          <div class="grid grid-cols-6 gap-6">
+
+
+            <div class="col-span-6 sm:col-span-2">
+              <label asp-for="FirstName"
+                     class="block text-sm font-medium text-gray-700">
+              </label>
+              <input asp-for="FirstName"
+                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm form-input focus:ring-blue-200 focus:border-blue-200 sm:text-sm"
+                     type="text"/>
+            </div>
+
+            <div class="col-span-6 sm:col-span-2">
+              <label asp-for="LastName"
+                     class="block text-sm font-medium text-gray-700">
+              </label>
+              <input asp-for="LastName"
+                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm form-input focus:ring-blue-200 focus:border-blue-200 sm:text-sm"
+                     type="text"/>
+            </div>
+
+            <div class="col-span-6 sm:col-span-6">
+              <div class="grid grid-cols-6 gap-6">
+                <partial for="@Model.Phone"
+                         name="~/Features/InviteUser/_PhoneNumber.cshtml">
+                </partial>
+              </div>
+            </div>
+
+            <div class="col-span-6 sm:col-span-6">
+              <div class="grid grid-cols-6 gap-6">
+                <partial for="Email"
+                         name="~/Features/InviteUser/_Email.cshtml">
+                </partial>
+              </div>
+            </div>
+          </div>
+
+          @* end body *@
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

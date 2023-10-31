@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspNetReact", "ViteAspNetReact\ViteAspNetReact.csproj", "{ABBCD86A-1C0A-4C98-9899-177B3C14158B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViteAspNetReact.IntegrationTests", "ViteAspNetReact.IntegrationTests\ViteAspNetReact.IntegrationTests.csproj", "{8DE720F3-97EF-4585-9AF3-FF129465A8BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{ABBCD86A-1C0A-4C98-9899-177B3C14158B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABBCD86A-1C0A-4C98-9899-177B3C14158B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABBCD86A-1C0A-4C98-9899-177B3C14158B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE720F3-97EF-4585-9AF3-FF129465A8BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE720F3-97EF-4585-9AF3-FF129465A8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE720F3-97EF-4585-9AF3-FF129465A8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE720F3-97EF-4585-9AF3-FF129465A8BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

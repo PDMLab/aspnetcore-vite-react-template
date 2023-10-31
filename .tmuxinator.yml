@@ -1,0 +1,66 @@
+name: aspnetcore-vite-react
+root: ./
+
+# Runs before everything. Use it to start daemons etc.
+on_project_start:
+  - echo starting stack...
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: input
+
+pre_window:
+windows:
+  - workspace:
+      layout: even-vertical
+      panes:
+        - health:
+            - printf '\033]2;%s\033\\' 'healthcheck'
+            - clear
+        - work:
+            - printf '\033]2;%s\033\\' 'workspace'
+            - clear
+  - api:
+      layout: even-vertical
+      panes:
+        - database:
+            - printf '\033]2;%s\033\\' 'api-database'
+            - cd database
+            - docker compose up
+        - server:
+            - printf '\033]2;%s\033\\' 'api'
+            - cd src/ViteAspNetReact
+            - kill -9 $(lsof -t -i tcp:5001)
+            - kill -9 $(lsof -t -i tcp:5000)
+            - if [[ "$APP_ENV" == "dev" ]]; then echo "use Rider to watch"; else dotnet watch run -- --launch-profile https --no-restore --no-hot-reload; fi
+        - workspace:
+            - printf '\033]2;%s\033\\' 'api-workspace'
+            - cd src/ViteAspNetReact
+            - clear
+  - tests:
+      layout: even-vertical
+      panes:
+        - marten-test:
+            - printf '\033]2;%s\033\\' 'marten-test'
+            - cd src/ViteAspNetReact.IntegrationTests/test-database
+            - docker compose up -d
+  - frontend:
+      layout: even-vertical
+      panes:
+        - vite:
+            - printf '\033]2;%s\033\\' 'vite-build'
+            - cd src/ViteAspNetReact/wwwroot
+            - yarn dev
+        - tailwind:
+            - printf '\033]2;%s\033\\' 'tailwind-build'
+            - cd src/ViteAspNetReact
+            - npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/site.css --watch
+        - workspace:
+            - printf '\033]2;%s\033\\' 'ui-workspace'
+            - cd src/ViteAspNetReact/wwwroot
+            - clear

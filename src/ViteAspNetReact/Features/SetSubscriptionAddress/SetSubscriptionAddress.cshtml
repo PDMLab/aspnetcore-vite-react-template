@@ -1,0 +1,8 @@
+@model ViteAspNetReact.Features.SetSubscriptionAddress.SetSubscriptionAddressModel
+
+@{
+  Layout = "_Layout";
+}
+
+@{@(await Html.
+    PartialAsync("~/Features/SetSubscriptionAddress/SetSubscriptionAddressForm.cshtml", Model))}

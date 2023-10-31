@@ -11,7 +11,7 @@ using ViteAspNetReact.Areas.Identity.Data;
 
 namespace ViteAspNetReact.Migrations
 {
-    [DbContext(typeof(IdentityDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220917060649_AddFirstNameLastNameProperties")]
     partial class AddFirstNameLastNameProperties
     {
