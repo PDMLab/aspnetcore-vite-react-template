@@ -1,9 +1,12 @@
+import forms from '@tailwindcss/forms'
+import debugScreens from 'tailwindcss-debug-screens'
+
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    '../Features/**/*.cshtml',
-    "../Areas/**/*.{cshtml,js}",
-    './*.html'
+    "Areas/**/*.{cshtml,js}",
+    'Features/**/*.cshtml',
+    'wwwroot/src/**/*.{js,jsx,ts,tsx}',
+    'wwwroot/*.html'
   ],
   safelist: [
     'field-validation-error',
@@ -11,8 +14,8 @@ module.exports = {
     'validation-summary-errors'
   ],
   plugins: [
-    require("@tailwindcss/forms"),
-    require('tailwindcss-debug-screens'),
+    forms,
+    debugScreens
   ],
   theme: {
     extend: {

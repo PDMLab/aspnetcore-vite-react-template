@@ -49,6 +49,21 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include=".aws\credentials" />
+      <Content Update="postcss.config.cjs">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <Watch>false</Watch>
+      </Content>
+      <Content Update="tailwind.config.cjs">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <Watch>false</Watch>
+      </Content>
+      <Content Update="tailwind.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <Watch>false</Watch>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
