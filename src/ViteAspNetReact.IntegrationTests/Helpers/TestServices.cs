@@ -1,6 +1,5 @@
 using Alba;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +10,6 @@ using Serilog.Extensions.Logging;
 using ViteAspNetReact.Areas.Identity.Data;
 using ViteAspNetReact.Core;
 using ViteAspNetReact.Features;
-using Xunit.Abstractions;
 using static ViteAspNetReact.IntegrationTests.Helpers.EventStoreHelpers;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 

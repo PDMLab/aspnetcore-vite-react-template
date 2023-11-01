@@ -2,7 +2,6 @@ using Shouldly;
 using ViteAspNetReact.Core;
 using ViteAspNetReact.IntegrationTests.Helpers;
 using ViteAspNetReact.IntegrationTests.TestData;
-using Xunit.Abstractions;
 
 namespace ViteAspNetReact.IntegrationTests.TestEmailTemplateServiceTests;
 

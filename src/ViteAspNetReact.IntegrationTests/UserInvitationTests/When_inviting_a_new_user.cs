@@ -9,7 +9,6 @@ using ViteAspNetReact.Features;
 using ViteAspNetReact.Features.GetInvitedUsers;
 using ViteAspNetReact.IntegrationTests.Helpers;
 using ViteAspNetReact.IntegrationTests.TestData;
-using Xunit.Abstractions;
 
 namespace ViteAspNetReact.IntegrationTests.UserInvitationTests;
 

@@ -12,7 +12,6 @@ using ViteAspNetReact.Features.RegisterUser;
 using ViteAspNetReact.Features.SetOrganizationAddress;
 using ViteAspNetReact.IntegrationTests.Helpers;
 using ViteAspNetReact.IntegrationTests.TestData;
-using Xunit.Abstractions;
 
 namespace ViteAspNetReact.IntegrationTests.SubscriptionTests;
 

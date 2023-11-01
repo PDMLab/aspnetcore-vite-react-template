@@ -9,21 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bedeaa2-bd05-4846-91e8-20b467a61474" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.tmuxinator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.tmuxinator.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/dictionaries/alexzeitler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ViteAspNetReact/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/ViteAspNetReact.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/ViteAspNetReact.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/postcss.config.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/postcss.config.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/src/tw.css" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/tailwind.config.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact/wwwroot/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/Helpers/TestServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/Helpers/TestServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/SubscriptionTests/When_setting_up_subscription_of_nive_crm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/SubscriptionTests/When_setting_up_subscription_of_nive_crm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/TestEMailSenderTests/When_sending_a_test_email.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/TestEMailSenderTests/When_sending_a_test_email.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/TestEmailTemplateServiceTests/When_creating_a_template.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/TestEmailTemplateServiceTests/When_creating_a_template.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/UserInvitationTests/When_inviting_a_new_user.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/UserInvitationTests/When_inviting_a_new_user.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/Usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViteAspNetReact.IntegrationTests/Usings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,15 +102,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698864384727</updated>
-      <workItem from="1698864387414" duration="651000" />
+      <workItem from="1698864387414" duration="1062000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor: move tailwind config to root of project to make it work with Rider">
+      <option name="closed" value="true" />
+      <created>1698865122667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698865122667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="refactor: move tailwind config to root of project to make it work with Rider" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: move tailwind config to root of project to make it work with Rider" />
   </component>
 </project>
