@@ -2,6 +2,7 @@ module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     '../Features/**/*.cshtml',
+    "../Areas/**/*.{cshtml,js}",
     './*.html'
   ],
   safelist: [
@@ -10,11 +11,8 @@ module.exports = {
     'validation-summary-errors'
   ],
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    require("@tailwindcss/forms")({
-      strategy: "class",
-    }),
-    require("tailwindcss-debug-screens"),
+    require("@tailwindcss/forms"),
+    require('tailwindcss-debug-screens'),
   ],
   theme: {
     extend: {
@@ -32,6 +30,9 @@ module.exports = {
           900: "#000E14",
         },
       },
+    },
+    debugScreens: {
+      position: ['bottom', 'left'],
     },
   },
   variants: {

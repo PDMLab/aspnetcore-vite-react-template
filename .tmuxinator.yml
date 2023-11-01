@@ -58,8 +58,8 @@ windows:
             - yarn dev
         - tailwind:
             - printf '\033]2;%s\033\\' 'tailwind-build'
-            - cd src/ViteAspNetReact
-            - npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/site.css --watch
+            - cd src/ViteAspNetReact/wwwroot
+            - npx tailwindcss -i ./css/input.css -o ./css/site.css --watch
         - workspace:
             - printf '\033]2;%s\033\\' 'ui-workspace'
             - cd src/ViteAspNetReact/wwwroot

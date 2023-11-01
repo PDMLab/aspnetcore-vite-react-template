@@ -1,6 +1,6 @@
 root = true
 
-[*.{cs,cshtml,css,html,js,json,ts,tsx}]
+[*.{cjs,cs,cshtml,css,cts,html,js,json,mjs,mts,ts,tsx}]
 indent_style = space
 indent_size = 2
 insert_final_newline = true
